@@ -1,69 +1,47 @@
 <!DOCTYPE html>
+<html lang="ar">
 <head>
-<title>Travel Bloom</title>
+<meta charset="UTF-8">
+<title>Travel Bloom - الرئيسية</title>
 <style>
-    body{
-        margin:0;
-        font-family:Arial,sans-serif;
-        background:url("./background.jpg") no-repeat center center/cover;
-        color:white;
-        text-align:center;
-    }
-    nav{
-         background: rgba(0,0,0,0.6);
-         padding: 15px;
-         display: flex;
-         align-items:center;
-         justify-content:center;
-         gap:20px;
-    }
-    nav a{
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-    }
-    .search-bar{
-        margin-left:20px;
-    }
-    input{
-        padding:7px
-    }
-    .hero{
-        margin-top:150px;
-        font-size:30px;
-    }
-    .social-icons img{
-        width:40px;
-        margin:10px;
-    }
+    body { margin:0; font-family:Arial,sans-serif; background:url("./background.jpg") no-repeat center center/cover; color:white; text-align:center; }
+    nav { background: rgba(0,0,0,0.6); padding: 15px; display: flex; align-items:center; justify-content:center; gap:20px; flex-wrap: wrap; }
+    nav a, nav button { color: white; text-decoration: none; font-weight: bold; padding:5px 10px; border:none; cursor:pointer; }
+    nav input { padding:7px; margin-left:5px; }
+    .hero { margin-top:100px; font-size:28px; line-height:1.6; }
+    .social-icons img { width:40px; margin:10px; }
+    #results div { margin:20px; padding:20px; background:#fff; color:#000; border-radius:10px; display:inline-block; vertical-align:top; width:300px; }
+    #results img { width:100%; height:auto; }
 </style>
 </head>
 <body>
-  <nav>
-        <a href="./index.html">Home</a>
-        <a href="./about.html">About us</a>
-        <a href="./contact.html">Contact us</a>
 
-        <input id="searchInput" class="search-bar" type="text" placeholder="Look for recommendations...">
-        <button onclick="search()">search</button>
-        <button onclick="clearResults()">clearResults</button>
-    </nav>
+<nav>
+    <a href="index.html">الصفحة الرئيسية</a>
+    <a href="about.html">من نحن</a>
+    <a href="contact.html">اتصل بنا</a>
+    <input id="searchInput" type="text" placeholder="ابحث عن توصيات...">
+    <button onclick="search()">بحث</button>
+    <button onclick="clearResults()">مسح</button>
+</nav>
 
-    <!-- مقدمة الصفحة -->
-    <div class="hero">
-        <h1>Welcome to the travel recommendations website</h1>
-        <p>Discover the best destinations around the world based on your interests.</p>
-    </div>
+<div class="hero">
+    <h1>مرحبًا بك في موقع Travel Bloom</h1>
+    <p>
+        نحن هنا لمساعدتك على اكتشاف أفضل الوجهات السياحية حول العالم، من الشواطئ الساحرة والمعابد التاريخية إلى المدن الحيوية والثقافات الغنية. 
+        سواء كنت تبحث عن مغامرة، استرخاء، أو رحلة ثقافية، ستجد توصيات مخصصة تناسب اهتماماتك. 
+        يمكنك استخدام شريط البحث للعثور على الأماكن التي ترغب في زيارتها، ورؤية صور مفصلة ووصف شامل لكل موقع.
+    </p>
+</div>
 
-    <!-- أيقونات التواصل -->
-    <div class="social-icons">
-        <img src="./facebook.png">
-        <img src="./instagram.png">
-        <img src="./twitter.png">
-    </div>
+<div class="social-icons">
+    <img src="./facebook.png" alt="Facebook">
+    <img src="./instagram.png" alt="Instagram">
+    <img src="./twitter.png" alt="Twitter">
+</div>
 
-    <!-- عرض النتائج -->
-    <div id="results" style="margin-top:50px;"></div>
+<div id="results"></div>
 
-    <script src = "./travel_recommendation.js"></script>
+<script src="travel_recommendation.js"></script>
 </body>
+</html>

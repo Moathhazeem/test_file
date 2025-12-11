@@ -2,60 +2,36 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<title>اتصل بنا</title>
-
+<title>Travel Bloom - اتصل بنا</title>
 <style>
-    body{
-        margin:0;
-        font-family:Arial,sans-serif;
-        background:url("./background.jpg") no-repeat center center/cover;
-        color:white;
-        text-align:center;
-    }
-    nav{
-         background: rgba(0,0,0,0.6);
-         padding: 15px;
-         display: flex;
-         align-items:center;
-         justify-content:center;
-         gap:20px;
-    }
-    nav a{
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-    }
-    .search-bar{
-        margin-left:20px;
-    }
-    input{
-        padding:7px
-    }
-    .hero{
-        margin-top:150px;
-        font-size:30px;
-    }
-    .social-icons img{
-        width:40px;
-        margin:10px;
-    }
+    body { margin:0; font-family:Arial,sans-serif; background:url("./background.jpg") no-repeat center center/cover; color:white; text-align:center; }
+    nav { background: rgba(0,0,0,0.6); padding: 15px; display: flex; justify-content:center; gap:20px; }
+    nav a { color:white; text-decoration:none; font-weight:bold; }
+    form { margin-top:50px; display:inline-block; background: rgba(0,0,0,0.6); padding:20px; border-radius:10px; width:300px; }
+    input, textarea { width:100%; margin:10px 0; padding:10px; border:none; border-radius:5px; }
+    button { padding:10px 20px; border:none; border-radius:5px; background:#ff6600; color:white; cursor:pointer; }
+    p.instructions { font-size:14px; line-height:1.5; margin-top:20px; color:#fff; }
 </style>
 </head>
-
 <body>
 
 <nav>
-    <a href="index.html">الرئيسية</a>
+    <a href="index.html">الصفحة الرئيسية</a>
     <a href="about.html">من نحن</a>
     <a href="contact.html">اتصل بنا</a>
 </nav>
 
 <h1>اتصل بنا</h1>
+<p class="instructions">
+    نود سماع ملاحظاتك وأسئلتك حول توصيات السفر والخدمات التي نقدمها. 
+    يرجى ملء النموذج أدناه بدقة وسنرد عليك في أقرب وقت ممكن. 
+    يمكنكم أيضًا اقتراح وجهات جديدة ترغبون في إضافتها إلى الموقع.
+</p>
 
 <form>
-    <input type="text" placeholder="الاسم">
-    <input type="email" placeholder="البريد الإلكتروني">
-    <textarea placeholder="اكتب رسالتك هنا..." rows="5"></textarea>
+    <input type="text" placeholder="الاسم" required>
+    <input type="email" placeholder="البريد الإلكتروني" required>
+    <textarea placeholder="اكتب رسالتك هنا..." rows="5" required></textarea>
     <button type="submit">إرسال</button>
 </form>
 
