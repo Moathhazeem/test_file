@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+<title>Travel Bloom</title>
+<style>
+    body{
+        margin:0;
+        font-family:Arial,sans-serif;
+        background:url("./background.jpg") no-repeat center center/cover;
+        color:white;
+        text-align:center;
+    }
+    nav{
+         background: rgba(0,0,0,0.6);
+         padding: 15px;
+         display: flex;
+         align-items:center;
+         justify-content:center;
+         gap:20px;
+    }
+    nav a{
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .search-bar{
+        margin-left:20px;
+    }
+    input{
+        padding:7px
+    }
+    .hero{
+        margin-top:150px;
+        font-size:30px;
+    }
+    .social-icons img{
+        width:40px;
+        margin:10px;
+    }
+</style>
+</head>
+<body>
+  <nav>
+        <a href="./travel_recommendation.html">Home</a>
+        <a href="about.html">About us</a>
+        <a href="contact.html">Contact us</a>
+
+        <input id="searchInput" class="search-bar" type="text" placeholder="Look for recommendations...">
+        <button onclick="search()">search</button>
+        <button onclick="clearResults()">clearResults</button>
+    </nav>
+
+    <!-- مقدمة الصفحة -->
+    <div class="hero">
+        <h1>Welcome to the travel recommendations website</h1>
+        <p>Discover the best destinations around the world based on your interests.</p>
+    </div>
+
+    <!-- أيقونات التواصل -->
+    <div class="social-icons">
+        <img src="./facebook.png">
+        <img src="./instagram.png">
+        <img src="./twitter.png">
+    </div>
+
+    <!-- عرض النتائج -->
+    <div id="results" style="margin-top:50px;"></div>
+
+    <script src = "./travel_recommendation.js"></script>
+</body>
